@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  nfsd:
+    image: itsthenetwork/nfs-server-alpine:12
+    container_name: nfsd
+    restart: always
+    privileged: true
+    environment:
+      - SHARED_DIRECTORY=/Volumes/10TBUSB
+    volumes:
+      - /Volumes/10TBUSB/nfs:/data
+    ports:
+      - 2049:2049
