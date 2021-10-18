@@ -2,7 +2,7 @@ version: '3'
 
 services:
   nfsd:
-    image: itsthenetwork/nfs-server-alpine:12
+    image: itsthenetwork/nfs-server-alpine:latest
     container_name: nfsd
     restart: always
     privileged: true
@@ -12,3 +12,4 @@ services:
       - /Volumes/10TBUSB/nfs:/data
     ports:
       - 2049:2049
+
